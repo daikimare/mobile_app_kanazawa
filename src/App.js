@@ -1,23 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './coponent/Navbar';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+// page component
+import Maparea from './coponent/Maparea';
+import Csv from './coponent/CSV';
+
+const Home = () =>{
+  return(
+    <h1>HomePage</h1>
+  );
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route path='/' component={Maparea} />
+          <Route path='/' component={Csv} />
+        </Switch>
+      </Router>
     </div>
   );
 }
