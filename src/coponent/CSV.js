@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/main.css';
+import './css/csv.css';
 
 function Csv() {
   return(
@@ -8,5 +8,4 @@ function Csv() {
     </div>
   );
 }
-Csv()
 export default Csv;
