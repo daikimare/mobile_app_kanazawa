@@ -10,7 +10,7 @@ class Navbar extends Component {
         <ul className="list">
           <li><Link to='/'>HomePage</Link></li>
           <li><Link to='/Maparea'>GoogleMap</Link></li>
-          <li><Link to='Csv'>金沢市の施設の一覧</Link></li>
+          <li><Link to='/Csv'>金沢市の施設の一覧</Link></li>
         </ul>
       </header>
     );
