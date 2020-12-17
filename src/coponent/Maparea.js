@@ -7,11 +7,35 @@ const APIKEY ="";
 function Maparea(){
 
   const [center, setCenter] = useState({
-    lat: 35,
-    lng: 135
+    lat: 34.673542,
+    lng: 135.433338
   });
   
-  const [zoom, setZoom] = useState(10);
+  const [zoom, setZoom] = useState(13);
+  
+  const [currentPosition, setCurrentposition] = useState();
+
+  //　起動時の表示画面の中視点座標
+  const current = data => {
+    const currentPosition = {
+      lat: data.coords.latitude,
+      lng: data.coords.longitude
+    };
+    setCurrentposition(currentPosition);
+    setCenter(currentPosition);
+  };
+  const unfind = data => {
+    const currentPosition = {
+      lat:34.673542,
+      lng:135.433338
+    };
+    setCurrentposition(currentPosition);
+    setCenter(currentPosition);
+  };
+
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(current, unfind);
+  }, []);
 
   return(
     <div className= "map">
@@ -20,9 +44,10 @@ function Maparea(){
         bootstrapURLKeys={{key:APIKEY}}
         center={center}
         defaultZoom={zoom}
-        ></GoogleMapReact>
+        >
+      
+        </GoogleMapReact>
     </div>
   );
 }
-// Maparea()
 export default Maparea;
