@@ -8,6 +8,7 @@ import Csv from './coponent/Csv';
 
 const Home = () =>{
   return(
+    // 以下のh1タグは表示されないようしてあります。
     <h1>HomePage</h1>
   );
 }
