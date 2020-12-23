@@ -45,8 +45,7 @@ function Maparea(){
         center={center}
         defaultZoom={zoom}
         >
-      
-        </GoogleMapReact>
+      </GoogleMapReact>
     </div>
   );
 }
