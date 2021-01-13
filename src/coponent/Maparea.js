@@ -1,11 +1,12 @@
 import React,{ useState, useEffect } from 'react';
 import './css/map.css';
+// GoogleMap利用のためのライブラリ
 import GoogleMapReact from 'google-map-react';
 import Marker from './Marker';
 
 // APIキーはなしで開発者モードで使用
 // デプロイする場合は.envを作成しそこにAPI_KEYを埋めて使用する
-const APIKEY ="AIzaSyDAgZauBEnRMfwedcglY0KxM3Q8kpFPcnE";
+const APIKEY ="";
 
 function Maparea(){
 
