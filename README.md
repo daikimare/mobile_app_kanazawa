@@ -43,6 +43,9 @@
 開発言語：**JavaScript**,*(React)*  
 使用したAPIなど：**GoogleMapAPI**,**shisetsu_kankou.csv**(金沢市提供オープンデータ)
 
+今後はcsvではなくAPIから情報を取得する方法に変更する。以下のURLを参照
+`https://www4.city.kanazawa.lg.jp/data/open/cnt/3/24011/1/API-Manual_1.1.pdf?20201207091932`
+
 ## 起動方法
 
 起動準備を行いましょう。  
